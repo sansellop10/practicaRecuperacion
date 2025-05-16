@@ -18,15 +18,15 @@ public class App{
         System.out.println("1. Sumar");
         System.out.println("2. Restar");
         System.out.println("\nIntroduce opcion");
-        System.out.println(" >");
+        System.out.print(" >");
     }
     public static void gestionarOpciones(int opcion){
         switch(opcion){
             case 1:
-                System.out.println("Falta por implementar la suma");
+                sumar();
             break;
             case 2:
-                System.out.println("Falta por implementar la resta");
+                restar();
             break;
             case 5:
                 System.out.println("Saliendo...");
@@ -35,5 +35,19 @@ public class App{
                 System.out.println("Error");
             break;
         }
+    }
+    public static void sumar(){
+        System.out.print("Ingresa numero 1: ");
+        int num1 = in.nextInt();
+        System.out.print("Ingresa numero 2: ");
+        int num2 = in.nextInt();
+        System.out.println("El resultado es: " +(num1 + num2));
+    }
+    public static void restar(){
+        System.out.print("Ingresa numero 1: ");
+        int num1 = in.nextInt();
+        System.out.print("Ingresa numero 2: ");
+        int num2 = in.nextInt();
+        System.out.println("El resultado es: " +(num1 - num2));
     }
 }
