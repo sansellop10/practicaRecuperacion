@@ -17,6 +17,9 @@ public class App{
         System.out.println("\nMenu de calculadora");
         System.out.println("1. Sumar");
         System.out.println("2. Restar");
+        System.out.println("3. Multiplicar");
+        System.out.println("4. Dividir");
+        System.out.println("5. Salir");
         System.out.println("\nIntroduce opcion");
         System.out.print(" >");
     }
@@ -27,6 +30,12 @@ public class App{
             break;
             case 2:
                 restar();
+            break;
+            case 3:
+                multiplicar();
+            break;
+            case 4: 
+                dividir();
             break;
             case 5:
                 System.out.println("Saliendo...");
@@ -49,5 +58,24 @@ public class App{
         System.out.print("Ingresa numero 2: ");
         int num2 = in.nextInt();
         System.out.println("El resultado es: " +(num1 - num2));
+    }
+    public static void multiplicar(){
+        System.out.print("Ingresa numero 1: ");
+        int num1 = in.nextInt();
+        System.out.print("Ingresa numero 2: ");
+        int num2 = in.nextInt();
+        System.out.println("El resultado es: " +(num1 * num2));
+    }
+    public static void dividir(){
+        try{
+            System.out.print("Ingresa numero 1: ");
+            int num1 = in.nextInt();
+            System.out.print("Ingresa numero 2: ");
+            int num2 = in.nextInt();
+            System.out.println("El resultado es: " +(num1 / num2));
+        }catch(ArithmeticException ex){
+            System.out.println("Error, no se puede dividir entre 0");
+        }
+        
     }
 }
